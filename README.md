@@ -1,4 +1,10 @@
-# Ember-cli-deploy-fanout
+# ember-cli-deploy-notify-fanout
+
+> An ember-cli-deploy plugin to post a message to Fanout on activation
+
+<hr/>
+**WARNING: This plugin is only compatible with ember-cli-deploy versions >= 0.5.0**
+<hr/>
 
 This README outlines the details of collaborating on this Ember addon.
 

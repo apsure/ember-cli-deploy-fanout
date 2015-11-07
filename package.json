@@ -1,7 +1,7 @@
 {
-  "name": "ember-cli-deploy-fanout",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "name": "ember-cli-deploy-notify-fanout",
+  "version": "0.0.1",
+  "description": "Publishing a message to fanout to let clients know a release happened",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -38,10 +38,13 @@
     "ember-try": "0.0.6"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-cli-deploy-plugin"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.3"
+    "ember-cli-babel": "^5.1.3",
+    "ember-cli-deploy-plugin": "0.2.0",
+    "fanoutpub": "^1.0.3"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
