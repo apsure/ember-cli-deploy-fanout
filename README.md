@@ -1,31 +1,71 @@
 # ember-cli-deploy-notify-fanout
 
-> An ember-cli-deploy plugin to post a message to Fanout on activation
+> An ember-cli-deploy plugin to notify your application of a release through [Fanout](http://fanout.io/)
 
-<hr/>
-**WARNING: This plugin is only compatible with ember-cli-deploy versions >= 0.5.0**
-<hr/>
+[![](https://ember-cli-deploy.github.io/ember-cli-deploy-version-badges/plugins/ember-cli-deploy-notify-fanout.svg)](http://ember-cli-deploy.github.io/ember-cli-deploy-version-badges/)
 
-This README outlines the details of collaborating on this Ember addon.
+This plugin will send a message through [Fanout](http://fanout.io/) that can be consumed by your application to let your users know an update has occured.
+
+## What is an ember-cli-deploy plugin?
+
+A plugin is an addon that can be executed as a part of the ember-cli-deploy pipeline. A plugin will implement one or more of the ember-cli-deploy's pipeline hooks.
+
+For more information on what plugins are and how they work, please refer to the [Plugin Documentation][1].
+
+## Quick Start
+
+- Install this plugin
+
+```bash
+$ ember install ember-cli-deploy-notify-fanout
+```
+
+- Run the pipeline
+
+```bash
+$ ember deploy
+```
 
 ## Installation
+Run the following command in your terminal:
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+```bash
+ember install ember-cli-deploy-notify-fanout
+```
 
-## Running
+## ember-cli-deploy Hooks Implemented
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+For detailed information on what plugin hooks are and how they work, please refer to the [Plugin Documentation][1].
+
+- `configure`
+- `didActivate`
+
+## Configuration Options
+
+For detailed information on how configuration of plugins works, please refer to the [Plugin Documentation][1].
+
+### realmId
+
+The realmId from your Fanout.io configuration (see their dashboard.)
+
+### realmKey
+
+The realmKey from your Fanout.io configuration (see their dashboard.)
+
+### channel
+
+Which channel you want to publish the message too.
+
+### payload
+
+The payload the send with the release activation.
+
+## Prerequisites
+
+None
 
 ## Running Tests
 
-* `ember test`
-* `ember test --server`
+- `npm test`
 
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+[1]: http://ember-cli.github.io/ember-cli-deploy/plugins "Plugin Documentation"
