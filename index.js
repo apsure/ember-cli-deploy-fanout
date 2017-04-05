@@ -1,7 +1,7 @@
 /* jshint node: true */
 'use strict';
 
-var Promise          = require('ember-cli/lib/ext/promise');
+var RSVP             = require('rsvp');
 var DeployPluginBase = require('ember-cli-deploy-plugin');
 var fanout           = require('fanoutpub');
 
@@ -53,7 +53,7 @@ module.exports = {
         var client = new fanout.Fanout(realmId, realmKey);
         var _this = this;
 
-        return new Promise(function(resolve, reject) {
+        return new RSVP.Promise(function(resolve, reject) {
           client.publish(channel, payload, function(success, message, context) {
             if (success) {
               _this.log('notified ' + channel + ' of activation');
