@@ -5,7 +5,7 @@ var DeployPluginBase = require('ember-cli-deploy-plugin');
 var fanout           = require('fanoutpub');
 
 module.exports = {
-  name: 'ember-cli-deploy-notify-fanout',
+  name: require('./package').name,
 
   createDeployPlugin: function(options) {
     var DeployPlugin = DeployPluginBase.extend({
