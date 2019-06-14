@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
-    "ember-cli-deploy-plugin": "0.2.0",
+    "ember-cli-deploy-plugin": "0.2.9",
     "fanoutpub": "^1.0.3"
   },
   "devDependencies": {
