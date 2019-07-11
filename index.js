@@ -16,8 +16,8 @@ module.exports = {
         realmKey: null,
 
         channelSuffix: null,
-        channel: function(context) {
-          var channelSuffix = this.readConfig('channelSuffix');
+        channel: function(context, pluginHelper) {
+          var channelSuffix = pluginHelper.readConfig('channelSuffix');
           if (channelSuffix) {
             return 'release/' + channelSuffix;
           }
@@ -29,9 +29,9 @@ module.exports = {
           return context.commandOptions.revision || (context.revisionData && context.revisionData.revisionKey);
         },
 
-        payload: function(context) {
+        payload: function(context, pluginHelper) {
           return {
-            revision: this.readConfig('revisionKey'),
+            revision: pluginHelper.readConfig('revisionKey'),
             at: (new Date()).getTime()
           }
         }
