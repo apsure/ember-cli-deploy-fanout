@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-deploy-notify-fanout",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Publishing a message to fanout to let clients know a release happened",
   "keywords": [
     "ember-addon",
